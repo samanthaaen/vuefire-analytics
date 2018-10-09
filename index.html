@@ -19,14 +19,14 @@
 	  <router-link to="local">Local</router-link>
 	</p>
 
-    <div v-if="charts.barData2 && currentRoute === '/bar'">
-      Chart: {{charts.barData2.title }}
-      <column-chart :data="charts.BarData.data"></column-chart>
+    <div v-if="charts.BarData && currentRoute === '/bar'">
+      Chart: {{charts.BarData.title}}
+      <column-chart :data="charts.BarData"></column-chart>
     </div>
 
-    <div v-if="charts.lineData2 && currentRoute === '/line'">
-	    Chart: {{charts.lineData2.title}}
-      <line-chart :data="charts.LineData.data"></line-chart>
+    <div v-if="charts.LineData && currentRoute === '/line'">
+	    Chart: {{charts.LineData.title}}
+      <line-chart :data="charts.LineData"></line-chart>
     </div>
 
 		<div v-if="currentRoute === '/local'">
