@@ -21,12 +21,12 @@
 
     <div v-if="charts.barData2 && currentRoute === '/bar'">
       Chart: {{charts.barData2.title }}
-      <column-chart :data="charts.barData2.data"></column-chart>
+      <column-chart :data="charts.BarData.data"></column-chart>
     </div>
 
     <div v-if="charts.lineData2 && currentRoute === '/line'">
 	    Chart: {{charts.lineData2.title}}
-      <line-chart :data="charts.lineData2.data"></line-chart>
+      <line-chart :data="charts.LineData.data"></line-chart>
     </div>
 
 		<div v-if="currentRoute === '/local'">
@@ -64,7 +64,7 @@ const router = new VueRouter({
   routes // short for `routes: routes`
 })
 		var db = firebase.initializeApp({
-        databaseURL: 'https://awesome-56c60.firebaseio.com'
+        databaseURL: 'https://name-1dc02.firebaseio.com/'
       }).database()
       var chartsRef = db.ref('charts')
       new Vue({
